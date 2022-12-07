@@ -145,7 +145,7 @@ func TestTransferTxDeadLock(t *testing.T) {
 
 	}
 
-	// Check the final updated balance
+	// Check the final updated  balance
 	updatedAcc1, err := testQueris.GetAccountForUpdate(context.Background(), acc1.ID)
 	require.NoError(t, err)
 
