@@ -19,4 +19,10 @@ sqlc:
 test:
 	go test -v -cover ./...
 
-.PHONY: postgres createdb dropdb migrateup migratedown sqlc
+server:
+	go run main.go
+
+kill:
+	kill -9 $(lsof -t -i:8080)
+
+.PHONY: postgres createdb dropdb migrateup migratedown sqlc server kill
